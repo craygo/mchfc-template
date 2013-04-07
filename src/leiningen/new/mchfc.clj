@@ -12,7 +12,6 @@
              [".gitignore"  (render "gitignore" data)]
              ["project.clj" (render "project.clj" data)]
              ["README.md"   (render "README.md" data)]
-             ["setenv"   (render "setenv" data)]
              ["config.rb"   (render "config.rb")]
              ["src/{{sanitized}}/core.clj" (render "src/mchfc/core.clj" data)]
              ["src/{{sanitized}}/controller.clj" (render "src/mchfc/controller.clj" data)]

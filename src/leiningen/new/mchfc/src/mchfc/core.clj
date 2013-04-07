@@ -17,7 +17,7 @@
                              [credentials :as creds]))
   )
 
-(def default-base-url "http://wnl-l.appspot.com")
+(def default-base-url "localhost")
 
 (defn wrap-authorize-2
   "Temp wrapper since friend/wrap-authorize doesn't work as advertised and throws exception
@@ -53,7 +53,7 @@
 
 (defn -main [port & [url]]
   (let [base-url (or url default-base-url)
-        mongo-uri (System/getenv "MONGOLAB_URI")]
+        mongo-uri (or (System/getenv "MONGOLAB_URI") "mongodb://localhost:27017/{{name}}")]
     (info "-main base-url " base-url " mongo-uri " mongo-uri)
     (defonce conn (mg/connect-via-uri! mongo-uri))
     (info (time (setup/install)))
