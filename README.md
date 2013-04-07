@@ -1,4 +1,4 @@
-# mchfc
+# mchfc-template
 
 A Leiningen template to start a web-app based on
 * Mongo DB (Monger)
