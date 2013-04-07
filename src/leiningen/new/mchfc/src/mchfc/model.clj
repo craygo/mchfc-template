@@ -1,7 +1,7 @@
 (ns {{name}}.model
   )
 
-; User - user of the system, generally a rater
+; User - user of the system
 (defrecord User [username password roles name])
  
 (defn new-user [username password roles name]
